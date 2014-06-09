@@ -8,4 +8,4 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias codefire='ssh savoca@node2-c6100.codefi.re'
-
+alias lk='ps -ef | grep'

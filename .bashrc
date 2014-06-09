@@ -18,6 +18,11 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# Bash Completion
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
 # Aliases
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
