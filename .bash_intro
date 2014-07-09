@@ -6,9 +6,9 @@ function pause(){
 	enter=$(echo -e "${yellow}Press any key to begin...${noco}")
 	read -p "$enter" config
 }
-echo -e "${lred}======================================================================================"
-echo -e "${lred}=                                 Welcome ${yellow}$USER@$HOSTNAME${lred}!                              ="
-echo -e "${lred}======================================================================================"
+echo -e "${lred}===================================================================================="
+echo -e "${lred}=                                 Welcome ${yellow}$USER@$HOSTNAME${lred}!                             ="
+echo -e "${lred}===================================================================================="
 archey
 pause
 clear

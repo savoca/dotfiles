@@ -1,10 +1,19 @@
-## ~/.bashrc
+# ~/.bashrc
 
 # History stuff
 HISTCONTROL=ignoreboth
 shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+PS1='[\u@\h \W]\$ '
+
+export EDITOR=nano
+export PATH=${PATH}:~/bin
 
 # Colors for ls and grep!
 if [ -x /usr/bin/dircolors ]; then
@@ -19,8 +28,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Bash Completion
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+if [ -f /usr/share/bash-completion/bash_completion ] && ! shopt -oq posix; then
+    . /usr/share/bash-completion/bash_completion
 fi
 
 # Aliases
@@ -35,5 +44,5 @@ fi
 
 # Prompt
 if [ -f ~/.bash_prompt ]; then
-	. ~/.bash_prompt
+    . ~/.bash_prompt
 fi

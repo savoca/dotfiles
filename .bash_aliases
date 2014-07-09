@@ -9,3 +9,9 @@ alias la='ls -A'
 alias l='ls -CF'
 alias codefire='ssh savoca@node2-c6100.codefi.re'
 alias lk='ps -ef | grep'
+alias wallpaper='feh --bg-scale'
+alias chrome='google-chrome-stable'
+alias tvdaemon='sudo systemctl start teamviewerd'
+alias minecraft='java -jar ~/bin/Minecraft.jar'
+alias wifi='nmcli dev wifi connect' #password
+
