@@ -9,6 +9,16 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+client.focused		#252525 #252525 #cccccc
+client.unfocused	#444444 #444444 #315858
+client.focused_inactive	#444444 #444444 #9b9bab
+client.urgent		#383a3b #383a3b #ee0000
+
+for_window [class="XTerm"] floating enable
+for_window [class="Thunar"] floating enable
+for_window [class="GParted"] floating enable
+for_window [class="Gedit"] floating enable
+
 set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -27,7 +37,10 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id xterm
+
+# start file manager
+bindsym $mod+t exec --no-startup-id thunar
 
 # kill focused window
 bindsym $mod+Shift+q kill

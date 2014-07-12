@@ -1,3 +1,3 @@
-XTerm*Background: black
+XTerm*Background: rgb:204/204/204
 XTerm*Foreground: white
 xterm*font: -gohu-gohufont-medium-*-*-*-14-*-*-*-*-*-*-*

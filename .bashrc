@@ -39,7 +39,7 @@ fi
 
 # Intro
 if [ -f ~/.bash_intro ]; then
-    . ~/.bash_intro
+    . ~/.bash_intro skip
 fi
 
 # Prompt
