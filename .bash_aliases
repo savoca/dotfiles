@@ -14,4 +14,4 @@ alias chrome='google-chrome-stable'
 alias tvdaemon='sudo systemctl start teamviewerd'
 alias minecraft='java -jar ~/bin/Minecraft.jar'
 alias wifi='nmcli dev wifi connect' #password
-
+alias tetris='python ~/bin/tetris/tetris.py'
