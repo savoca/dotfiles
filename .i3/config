@@ -11,8 +11,8 @@ for_window [class="Nautilus"] floating enable
 for_window [class="GParted"] floating enable
 for_window [class="Gedit"] floating enable
 for_window [class="Deluge"] floating enable
-for_window [class="chrome"] floating enable
 for_window [class="Filezilla"] floating enable
+for_window [class="File-roller"] floating enable
 
 # Modkey
 set $mod Mod1
