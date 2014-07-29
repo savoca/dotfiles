@@ -5,4 +5,4 @@ cmustat=$(echo "$(cmus-remote -Q 2>/dev/null)" | grep -o 'status [^\$]\+' | cut 
 if [ "$cmustat" = "playing" ]; then
 	cmus-remote -u
 fi
-i3lock -i /tmp/screen.png
+i3lock -u -i /tmp/screen.png
