@@ -14,12 +14,21 @@ for_window [class="Deluge"] floating enable
 for_window [class="Filezilla"] floating enable
 for_window [class="File-roller"] floating enable
 
+# 0px Border Windows
+for_window [class="chrome"] border none
+for_window [class="Firefox"] border none
+
 # Modkey
 set $mod Mod1
 
 # Aesthetics
 bindsym $mod+Shift+n border normal
 bindsym $mod+Shift+x border none
+
+# CMUS Controller
+bindsym $mod+c exec cmus-remote -u
+bindsym $mod+b exec cmus-remote -n
+bindsym $mod+z exec cmus-remote -p
 
 # Font
 font -gohu-gohufont-*-*-*-*-11-*-*-*-*-*-*-*
@@ -100,7 +109,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # Start i3bar
 bar {
-	status_command i3status
+	status_command i3status -c ~/.i3/i3status.conf
     colors {
         background #101010
         statusline #999999
