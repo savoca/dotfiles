@@ -13,10 +13,12 @@ for_window [class="Gedit"] floating enable
 for_window [class="Deluge"] floating enable
 for_window [class="Filezilla"] floating enable
 for_window [class="File-roller"] floating enable
+for_window [class="Spotify"] floating enable
 
 # 0px Border Windows
 for_window [class="chrome"] border none
 for_window [class="Firefox"] border none
+for_window [class="XTerm"] border none
 
 # Modkey
 set $mod Mod1
@@ -49,6 +51,9 @@ bindsym $mod+Shift+q kill
 # Start dmenu
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# Start conky
+bindsym $mod+o exec --no-startup-id conky
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -60,6 +65,11 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+bindsym $mod+Control+Left exec "i3-msg move left && i3-msg move left && i3-msg move left && i3-msg move left && i3-msg move left"
+bindsym $mod+Control+Down exec "i3-msg move down && i3-msg move down && i3-msg move down && i3-msg move down && i3-msg move down"
+bindsym $mod+Control+Up exec "i3-msg move up && i3-msg move up && i3-msg move up && i3-msg move up && i3-msg move up"
+bindsym $mod+Control+Right exec "i3-msg move right && i3-msg move right && i3-msg move right && i3-msg move right && i3-msg move right"
+
 
 # split in horizontal orientation
 bindsym $mod+h split h
@@ -112,6 +122,7 @@ bindsym $mod+Shift+l exec "~/bin/lock.sh"
 # Start i3bar
 bar {
 	status_command i3status -c ~/.i3/i3status.conf
+
     colors {
         background #101010
         statusline #999999
