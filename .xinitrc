@@ -4,6 +4,6 @@ then
 	xrandr --output HDMI-0 --mode 1920x1080
 fi
 . /home/savoca/.fehbg
-compton --refresh-rate 60 --vsync opengl-swc &
+compton -b
 sleep 2s &
 exec i3
