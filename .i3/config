@@ -6,6 +6,7 @@ client.urgent		#383a3b #383a3b #ee0000
 
 # Floating Windows
 for_window [class="XTerm"] floating enable
+for_window [class="URxvt"] floating enable
 for_window [class="Thunar"] floating enable
 for_window [class="Nautilus"] floating enable
 for_window [class="GParted"] floating enable
@@ -18,7 +19,6 @@ for_window [class="Spotify"] floating enable
 # 0px Border Windows
 for_window [class="chrome"] border none
 for_window [class="Firefox"] border none
-for_window [class="XTerm"] border none
 
 # Modkey
 set $mod Mod1
@@ -39,7 +39,7 @@ font -gohu-gohufont-*-*-*-*-11-*-*-*-*-*-*-*
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id xterm
+bindsym $mod+Return exec --no-startup-id urxvt
 
 # start file manager
 bindsym $mod+t exec --no-startup-id thunar
