@@ -37,11 +37,6 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# Intro
-if [ -f ~/.bash_intro ]; then
-    . ~/.bash_intro skip
-fi
-
 # Prompt
 if [ -f ~/.bash_prompt ]; then
     . ~/.bash_prompt
