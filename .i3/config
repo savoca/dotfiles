@@ -15,6 +15,7 @@ for_window [class="Deluge"] floating enable
 for_window [class="Filezilla"] floating enable
 for_window [class="File-roller"] floating enable
 for_window [class="Spotify"] floating enable
+for_window [class="Gnome-terminal"] floating enable
 
 # 0px Border Windows
 for_window [class="chrome"] border none
@@ -26,6 +27,7 @@ set $mod Mod1
 # Aesthetics
 bindsym $mod+Shift+n border normal
 bindsym $mod+Shift+x border none
+bindsym $mod+Shift+o border 1pixel
 
 # CMUS Controller
 bindsym $mod+c exec cmus-remote -u
@@ -39,7 +41,7 @@ font -gohu-gohufont-*-*-*-*-11-*-*-*-*-*-*-*
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Return exec --no-startup-id gnome-terminal
 
 # start file manager
 bindsym $mod+t exec --no-startup-id thunar
