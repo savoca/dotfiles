@@ -20,6 +20,7 @@ for_window [class="Gnome-terminal"] floating enable
 # 0px Border Windows
 for_window [class="chrome"] border none
 for_window [class="Firefox"] border none
+for_window [class="URxvt" ] border none
 
 # Modkey
 set $mod Mod1
@@ -41,7 +42,7 @@ font -gohu-gohufont-*-*-*-*-11-*-*-*-*-*-*-*
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id gnome-terminal
+bindsym $mod+Return exec --no-startup-id urxvt
 
 # start file manager
 bindsym $mod+t exec --no-startup-id thunar
