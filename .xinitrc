@@ -1,7 +1,7 @@
-if (xrandr | grep "HDMI-0 connected" > /dev/null)
+if (xrandr | grep "HDMI1 connected" > /dev/null)
 then
-	xrandr --output LVDS --off
-	xrandr --output HDMI-0 --mode 1920x1080
+	xrandr --output LVDS1 --off
+	xrandr --output HDMI1 --mode 1920x1080
 fi
 . /home/savoca/.fehbg
 compton -b

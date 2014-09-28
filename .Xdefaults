@@ -22,6 +22,6 @@ urxvt.color14: #c3d7dc
 urxvt.color7: #6e4c6a
 urxvt.color15: #765471
 URxvt.transparent:          true
-URxvt.shading:              80
+URxvt.shading:              65
 URxvt.blurRadius:           5
 URxvt.fading:               30
