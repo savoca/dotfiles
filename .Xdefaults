@@ -17,8 +17,8 @@
 *color13: #cf8fcf
 *color14: #7fbfef
 *color15: #cfdfef
-URxvt*font:	-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-URxvt*boldFont:	-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt*font: -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
+URxvt*boldFont:	-*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 URxvt*cursorColor:	#5f8fbf
 URxvt*scrollBar:	false
 
