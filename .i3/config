@@ -1,8 +1,8 @@
 # Colors
-client.focused		#252525 #252525 #cccccc
-client.unfocused	#444444 #444444 #315858
-client.focused_inactive	#444444 #444444 #9b9bab
-client.urgent		#383a3b #383a3b #ee0000
+client.focused			#8b7e52 #8b7e52 #252525 #c38458
+client.unfocused		#8b7e52 #776847 #252525 #776847
+client.focused_inactive	#8b7e52 #776847 #252525 #776847
+client.urgent			#8b7e52 #776847 #252525 #776847
 
 # Floating Windows
 for_window [class="XTerm"] floating enable
@@ -36,7 +36,7 @@ bindsym $mod+b exec cmus-remote -n
 bindsym $mod+z exec cmus-remote -p
 
 # Font
-font -gohu-gohufont-*-*-*-*-11-*-*-*-*-*-*-*
+font -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
 
 # Mod+Mouse to move (isn't really needed)
 floating_modifier $mod
@@ -127,11 +127,11 @@ bar {
 	status_command i3status -c ~/.i3/i3status.conf
 
     colors {
-        background #101010
-        statusline #999999
-        focused_workspace #825969 #191919
-        active_workspace #825969 #101010
-        inactive_workspace #9a878f #191919
-        urgent_workspace #2e3436 #9a878f
+        statusline #9c8f62
+        background #252525
+		focused_workspace		#8b7e52 #252525 #9c8f62 #c38458
+		active_workspace		#8b7e52 #252525 #9c8f62 #252525
+		inactive_workspace		#252525 #252525 #9c8f62 #252525
+		urgent_workspace		#8b7e52 #252525 #9c8f62 #252525
     }
 }
