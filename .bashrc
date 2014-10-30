@@ -36,8 +36,7 @@ alias ..='cd ..'
 alias codefire='ssh savoca@node2-c6100.codefi.re'
 alias savocavm='ssh savoca@savoca.codefi.re'
 alias wallpaper='feh --bg-scale'
-alias wifi='nmcli device wifi connect' #<ssid> password <password>
-alias wifioff='nmcli device disconnect wlo1' #wlo1 for main pc
+alias define='sdcv -u '\''WordNet (r) 1.7'\'
 
 # prompt and such
 function git_branch {
@@ -45,3 +44,4 @@ function git_branch {
 }
 
 PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\]\[\e[0;32m\]$(git_branch)\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'
+export GOPATH=/home/savoca/Workspace/gocode/

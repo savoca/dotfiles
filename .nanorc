@@ -1,1 +1,86 @@
+## Use 4-space tabsize
 set tabsize 4
+
+## Don't display the helpful shortcut lists at the bottom of the screen.
+set nohelp
+
+## Don't wrap text at all.
+set nowrap
+
+## Nanorc files
+include /usr/share/nano/nanorc.nanorc
+
+## C/C++
+include /usr/share/nano/c.nanorc
+
+## Makefiles
+include /usr/share/nano/makefile.nanorc
+
+## Cascading Style Sheets
+include /usr/share/nano/css.nanorc
+
+## Debian files
+include /usr/share/nano/debian.nanorc
+
+## Gentoo files
+include /usr/share/nano/gentoo.nanorc
+
+## HTML
+include /usr/share/nano/html.nanorc
+
+## PHP
+include /usr/share/nano/php.nanorc
+
+## TCL
+include /usr/share/nano/tcl.nanorc
+
+## TeX
+include /usr/share/nano/tex.nanorc
+
+## Quoted emails (under e.g. mutt)
+include /usr/share/nano/mutt.nanorc
+
+## Patch files
+include /usr/share/nano/patch.nanorc
+
+## Manpages
+include /usr/share/nano/man.nanorc
+
+## Groff
+include /usr/share/nano/groff.nanorc
+
+## Perl
+include /usr/share/nano/perl.nanorc
+
+## Python
+include /usr/share/nano/python.nanorc
+
+## Ruby
+include /usr/share/nano/ruby.nanorc
+
+## Java
+include /usr/share/nano/java.nanorc
+
+## Fortran
+include /usr/share/nano/fortran.nanorc
+
+## Objective-C
+include /usr/share/nano/objc.nanorc
+
+## OCaml
+include /usr/share/nano/ocaml.nanorc
+
+## AWK
+include /usr/share/nano/awk.nanorc
+
+## Assembler
+include /usr/share/nano/asm.nanorc
+
+## Bourne shell scripts
+include /usr/share/nano/sh.nanorc
+
+## POV-Ray
+include /usr/share/nano/pov.nanorc
+
+## XML-type files
+include /usr/share/nano/xml.nanorc
