@@ -42,6 +42,7 @@ alias ..='cd ..'
 alias codefire='ssh savoca@node2-c6100.codefi.re'
 alias savocavm='ssh savoca@savoca.codefi.re'
 alias wallpaper='feh --bg-scale'
+alias sdr='screen -d -r'
 
 # prompt and such
 function git_branch {
