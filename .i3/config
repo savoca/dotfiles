@@ -109,21 +109,24 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+Shift+l exec "~/bin/lock.sh"
 
 # Colors
-client.focused          #3498DB #3498DB #ECF0F1 #2ECC71
-client.unfocused        #3498DB #2C3E50 #ECF0F1 #2C3E50
-client.focused_inactive #3498DB #2C3E50 #ECF0F1 #2C3E50
-client.urgent           #3498DB #2C3E50 #ECF0F1 #2C3E50
+
+#name                   #top    #border #text
+client.focused          #402e2e #978965 #402e2e
+client.unfocused        #402e2e #402e2e #978965
+client.focused_inactive #402e2e #402e2e #978965
+client.urgent           #402e2e #402e2e #978965
 
 # Start i3bar
 bar {
 	status_command i3status -c ~/.i3/i3status.conf
-
 	colors {
-    statusline  #ECF0F1
-    background  #2C3E50
-    focused_workspace  #3498DB #2C3E50 #f5f5f5
-    active_workspace   #1ABC9C #2C3E50 #BDC3C7
-    inactive_workspace #2C3E50 #2C3E50 #BDC3C7
-    urgent_workspace   #f92672 #2C3E50 #BDC3C7
+    statusline  #978965
+    background  #1f1f1f
+
+	#name              #border #bg     #text
+    focused_workspace  #978965 #402e2e #978965
+    active_workspace   #402e2e #402e2e #978965
+    inactive_workspace #402e2e #402e2e #978965
+    urgent_workspace   #402e2e #402e2e #978965
   }
 }

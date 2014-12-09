@@ -1,49 +1,50 @@
-! special
-*.foreground:   #6f7f8f
-*.background:   #1f2f3f
-*.cursorColor:  #5f8f8f
+! stuff
+*.background: #1f1f1f
+*.foreground: #c0b18b
+*.cursorColor:#c0b18b
+*.colorBD:    #c0b18b
+*.colorUL:    #c0b18b
+*.colorIT:    #c0b18b
 
 ! black
-*.color0:       #0f1f2f
-*.color8:       #3f4f5f
+*.color0:  #4a3637
+*.color8:  #402e2e
 
 ! red
-*.color1:       #af3f3f
-*.color9:       #df6f6f
+*.color1:  #d17b49
+*.color9:  #ac5d2f
 
 ! green
-*.color2:       #8faf4f
-*.color10:      #afdf7f
+*.color2:  #7b8748
+*.color10: #647035
 
 ! yellow
-*.color3:       #cf9f3f
-*.color11:      #ffcf6f
+*.color3:  #af865a
+*.color11: #8f6840
 
 ! blue
-*.color4:       #4f6f8f
-*.color12:      #7f9fbf
+*.color4:  #535c5c
+*.color12: #444b4b
 
 ! magenta
-*.color5:       #8f5f8f
-*.color13:      #bf8fbf
+*.color5:  #775759
+*.color13: #614445
 
 ! cyan
-*.color6:       #5f8f8f
-*.color14:      #8fbfbf
+*.color6:  #6d715e
+*.color14: #585c49
 
 ! white
-*.color7:       #afbfcf
-*.color15:      #dfefff
-
+*.color7:  #c0b18b
+*.color15: #978965
 
 ! urxvt
-URxvt*boldFont:	-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
 URxvt*cursorBlink: true
 URxvt*font:	-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-!URxvt*letterSpace: -1
-URxvt*scrollBar:	false
+URxvt*boldFont:	-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt*scrollBar: false
 URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/bin/google-chrome-unstable
+URxvt.url-launcher: /usr/bin/google-chrome-stable
 URxvt.matcher.button: 1
 
 *internalBorder: 16
