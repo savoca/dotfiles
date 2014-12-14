@@ -5,5 +5,4 @@ then
 fi
 . /home/savoca/.fehbg
 compton -b
-sleep 2s &
 exec i3
