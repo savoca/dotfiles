@@ -37,13 +37,16 @@ alias stat='git status'
 alias cmt='git commit'
 alias psh='git push'
 alias rvt='git revert'
-alias gedit='gedit $1 > /dev/null 2>&1'
 alias ..='cd ..'
 alias codefire='ssh savoca@node2-c6100.codefi.re'
 alias savocavm='ssh savoca@savoca.codefi.re'
 alias wallpaper='feh --bg-scale'
 alias sdr='screen -d -r'
 alias tortilla='transmission-cli -w /home/savoca/Torrents/'
+
+function lastcommit {
+	git log $1 --pretty=oneline | head -1 | cut -f 1 -d " "
+}
 
 # prompt and such
 function git_branch {
