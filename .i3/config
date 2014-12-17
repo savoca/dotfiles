@@ -81,7 +81,7 @@ bindsym $mod+2 workspace 2: web
 bindsym $mod+3 workspace 3: term
 bindsym $mod+4 workspace 4: aux
 bindsym $mod+5 workspace 5: vid
-bindsym $mod+6 workspace 6
+bindsym $mod+6 workspace 6: dev
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
@@ -93,7 +93,7 @@ bindsym $mod+Shift+2 move container to workspace 2: web
 bindsym $mod+Shift+3 move container to workspace 3: term
 bindsym $mod+Shift+4 move container to workspace 4: aux
 bindsym $mod+Shift+5 move container to workspace 5: vid
-bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+6 move container to workspace 6: dev
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
@@ -107,6 +107,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # lock i3
 bindsym $mod+Shift+l exec "~/bin/lock.sh"
+# screenshot
+bindsym $mod+Shift+s exec "mkdir -p Pictures/Screenshots && scrot -q 100 Pictures/Screenshots/scrot.jpg"
 
 # Colors
 client.focused          #3498DB #3498DB #ECF0F1 #2ECC71
