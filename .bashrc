@@ -40,7 +40,7 @@ alias rvt='git revert'
 alias ..='cd ..'
 alias codefire='ssh savoca@node2-c6100.codefi.re'
 alias savocavm='ssh savoca@savoca.codefi.re'
-alias wallpaper='feh --bg-scale'
+alias wallpaper='feh --bg-fill'
 alias sdr='screen -d -r'
 alias tortilla='transmission-cli -w /home/savoca/Torrents/'
 
