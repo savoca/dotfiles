@@ -1,0 +1,17 @@
+# ~/.xbindkeysrc
+
+"/home/savoca/bin/xbldec.sh 1 10"
+    m:0x0 + c:72
+    F6
+"xbacklight -inc 10"
+    m:0x0 + c:73
+    F7
+"amixer set Master toggle"
+    m:0x0 + c:74
+    F8
+"amixer set Master 10- unmute"
+    m:0x0 + c:75
+    F9
+"amixer set Master 10+ unmute"
+    m:0x0 + c:76
+    F10
