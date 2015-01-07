@@ -28,8 +28,11 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# aliases and such
+# aliases and such for general
 alias pls='sudo'
+alias ..='cd ..'
+
+# for git stuff
 alias pik='git cherry-pick'
 alias pikab='git cherry-pick --abort'
 alias gaa='git add --all'
@@ -37,12 +40,16 @@ alias stat='git status'
 alias cmt='git commit'
 alias psh='git push'
 alias rvt='git revert'
-alias ..='cd ..'
-alias codefire='ssh savoca@node2-c6100.codefi.re'
-alias savocavm='ssh savoca@savoca.codefi.re'
+
+# for ssh'ing
+alias ssh-node2='ssh savoca@node2-c6100.codefi.re'
+alias ssh-savoca='ssh savoca@savoca.codefi.re'
+
+# for all other programs
 alias wallpaper='feh --bg-fill'
 alias sdr='screen -d -r'
 alias tortilla='transmission-cli -w /home/savoca/Torrents/'
+alias ranger='python3 /usr/bin/ranger'
 
 function lastcommit {
 	git log $1 --pretty=oneline | head -1 | cut -f 1 -d " "
