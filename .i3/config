@@ -113,10 +113,10 @@ bindsym $mod+Shift+s exec "mkdir -p Pictures/Screenshots && scrot -q 100 Picture
 # Colors
 
 #name                   #top    #border #text
-client.focused          #402e2e #978965 #402e2e
-client.unfocused        #402e2e #402e2e #978965
-client.focused_inactive #402e2e #402e2e #978965
-client.urgent           #402e2e #402e2e #978965
+client.focused          #402e2e #978965 #402e2e #978965
+client.unfocused        #402e2e #402e2e #978965 #402e2e
+client.focused_inactive #402e2e #402e2e #978965 #402e2e
+client.urgent           #402e2e #402e2e #978965 #402e2e
 
 # Start i3bar
 bar {
