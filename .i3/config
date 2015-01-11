@@ -111,7 +111,7 @@ bindsym $mod+Shift+l exec "~/bin/lock.sh"
 bindsym $mod+Shift+s exec "mkdir -p Pictures/Screenshots && scrot -q 100 Pictures/Screenshots/scrot.jpg"
 
 # Colors
-client.focused          #3498DB #3498DB #ECF0F1 #2ECC71
+client.focused          #3498DB #3498DB #ECF0F1 #3498DB
 client.unfocused        #3498DB #2C3E50 #ECF0F1 #2C3E50
 client.focused_inactive #3498DB #2C3E50 #ECF0F1 #2C3E50
 client.urgent           #3498DB #2C3E50 #ECF0F1 #2C3E50
