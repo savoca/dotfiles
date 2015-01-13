@@ -39,12 +39,11 @@
 *.color15: #978965
 
 ! urxvt
-URxvt*cursorBlink: true
-URxvt*font:	-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-URxvt*boldFont:	-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-URxvt*scrollBar: false
-URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/bin/google-chrome-stable
-URxvt.matcher.button: 1
-
-*internalBorder: 16
+URxvt*cursorBlink: 		true
+URxvt*font:				-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt*boldFont:			-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt*scrollBar: 		false
+URxvt.perl-ext-common:	default,matcher
+URxvt.url-launcher: 	/usr/bin/google-chrome-stable
+URxvt.matcher.button: 	1
+URxvt*internalBorder: 	16
