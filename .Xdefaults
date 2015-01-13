@@ -37,13 +37,11 @@
 
 
 ! urxvt
-URxvt*boldFont:	-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-URxvt*cursorBlink: true
-URxvt*font:	-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-!URxvt*letterSpace: -1
-URxvt*scrollBar:	false
-URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/bin/google-chrome-unstable
-URxvt.matcher.button: 1
-
-*internalBorder: 16
+URxvt*boldFont:			-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt*cursorBlink: 		true
+URxvt*font:				-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt*scrollBar: 		false
+URxvt.perl-ext-common:	default,matcher
+URxvt.url-launcher:		/usr/bin/google-chrome-stable
+URxvt.matcher.button: 	1
+URxvt*internalBorder: 	16
