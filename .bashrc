@@ -50,6 +50,7 @@ alias wallpaper='feh --bg-fill'
 alias sdr='screen -d -r'
 alias tortilla='transmission-cli -w /home/savoca/Torrents/'
 alias ranger='python3 /usr/bin/ranger'
+alias muhip='curl -s checkip.dyndns.org | cut -f 6 -d " " | cut -f 1 -d "<"'
 
 function lastcommit {
 	git log $1 --pretty=oneline | head -1 | cut -f 1 -d " "
