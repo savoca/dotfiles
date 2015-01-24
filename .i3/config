@@ -8,16 +8,15 @@ for_window [class="Gedit"] floating enable
 for_window [class="Deluge"] floating enable
 for_window [class="Filezilla"] floating enable
 for_window [class="File-roller"] floating enable
-for_window [class="Spotify"] floating enable
 for_window [class="Gnome-terminal"] floating enable
 
 # 0px Border Windows
 for_window [class="chrome"] border none
 for_window [class="Firefox"] border none
+for_window [class="Spotify"] border none
 
 # 1px Border Windows
 for_window [class="URxvt" ] border 1pixel
-for_window [class="Spotify"] border 1pixel
 
 # Modkey
 set $mod Mod1
