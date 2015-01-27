@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+#
+# Copyright 2015 savoca <savoca@codefi.re>
+#
+# Distributed under the terms of the GNU General Public License v3.
+# See http://www.gnu.org/licenses/gpl.txt for the full license text.
+
+from sys import version
+from sys import argv
+from sys import exit
+
+pyver = int(version.split(".")[0])
+
+try:
+	import requests
+except ImportError:
+	print("Could not run - is python" + ('2' if pyver == 2 else '') \
+	+ "-requests installed?")
+	exit()
+
+def usage():
+	print("Usage: " + argv[0] + " <filename>")
+	exit()
+
+if len(argv) != 2:
+	usage()
+
+upload = argv[1]
+
+try:
+	response = requests.post(
+		url="http://pomf.se/upload.php",
+		files={"files[]":open(upload, "rb")}
+	)
+except Exception as e:
+	print("Error uploading {0}".format(e))
+	exit()
+
+local = upload.split('/')
+count = len(local)
+if count > 1:
+	local = local[count - 1]
+else:
+	local = local[0]
+
+remote = "http://a.pomf.se/" + response.text.split('"')[17]
+
+print(local + " -> " + remote)
