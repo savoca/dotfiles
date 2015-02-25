@@ -112,22 +112,22 @@ bindsym $mod+Shift+s exec "mkdir -p Pictures/Screenshots && scrot -q 100 Picture
 # Colors
 
 #name                   #top    #border #text
-client.focused          #402e2e #978965 #402e2e #978965
-client.unfocused        #402e2e #402e2e #978965 #402e2e
-client.focused_inactive #402e2e #402e2e #978965 #402e2e
-client.urgent           #402e2e #402e2e #978965 #402e2e
+client.focused          #747C84 #F3F4F5 #747C84 #F3F4F5
+client.unfocused        #747C84 #747C84 #F3F4F5 #747C84
+client.focused_inactive #747C84 #747C84 #F3F4F5 #747C84
+client.urgent           #747C84 #747C84 #F3F4F5 #747C84
 
 # Start i3bar
 bar {
 	status_command i3status -c ~/.i3/i3status.conf
 	colors {
-    statusline  #978965
-    background  #1f1f1f
+    statusline  #F3F4F5
+    background  #1C2023
 
 	#name              #border #bg     #text
-    focused_workspace  #978965 #402e2e #978965
-    active_workspace   #402e2e #402e2e #978965
-    inactive_workspace #402e2e #402e2e #978965
-    urgent_workspace   #402e2e #402e2e #978965
+    focused_workspace  #F3F4F5 #747C84 #F3F4F5
+    active_workspace   #747C84 #747C84 #F3F4F5
+    inactive_workspace #747C84 #747C84 #F3F4F5
+    urgent_workspace   #747C84 #747C84 #F3F4F5
   }
 }
