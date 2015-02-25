@@ -37,7 +37,6 @@
 
 
 ! urxvt
-URxvt*boldFont:			-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
 URxvt*cursorBlink: 		true
 URxvt*font:				-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
 URxvt*scrollBar: 		false
