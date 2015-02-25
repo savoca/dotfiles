@@ -41,7 +41,6 @@
 ! urxvt
 URxvt*cursorBlink: 		true
 URxvt*font:				-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-URxvt*boldFont:			-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
 URxvt*scrollBar: 		false
 URxvt.perl-ext-common:	default,matcher
 URxvt.url-launcher: 	/usr/bin/google-chrome-stable
