@@ -75,24 +75,24 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # switch to workspace
-bindsym $mod+1 workspace 1: main
-bindsym $mod+2 workspace 2: web
-bindsym $mod+3 workspace 3: term
-bindsym $mod+4 workspace 4: aux
-bindsym $mod+5 workspace 5: vid
-bindsym $mod+6 workspace 6: dev
+bindsym $mod+1 workspace 1:main
+bindsym $mod+2 workspace 2:web
+bindsym $mod+3 workspace 3:term
+bindsym $mod+4 workspace 4:aux
+bindsym $mod+5 workspace 5:vid
+bindsym $mod+6 workspace 6:dev
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1: main
-bindsym $mod+Shift+2 move container to workspace 2: web
-bindsym $mod+Shift+3 move container to workspace 3: term
-bindsym $mod+Shift+4 move container to workspace 4: aux
-bindsym $mod+Shift+5 move container to workspace 5: vid
-bindsym $mod+Shift+6 move container to workspace 6: dev
+bindsym $mod+Shift+1 move container to workspace 1:main
+bindsym $mod+Shift+2 move container to workspace 2:web
+bindsym $mod+Shift+3 move container to workspace 3:term
+bindsym $mod+Shift+4 move container to workspace 4:aux
+bindsym $mod+Shift+5 move container to workspace 5:vid
+bindsym $mod+Shift+6 move container to workspace 6:dev
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
@@ -118,13 +118,15 @@ client.urgent           #3498DB #2C3E50 #ECF0F1 #2C3E50
 # Start i3bar
 bar {
 	status_command i3status -c ~/.i3/i3status.conf
+	strip_workspace_numbers yes
 
 	colors {
-    statusline  #ECF0F1
-    background  #2C3E50
-    focused_workspace  #3498DB #2C3E50 #f5f5f5
-    active_workspace   #1ABC9C #2C3E50 #BDC3C7
-    inactive_workspace #2C3E50 #2C3E50 #BDC3C7
-    urgent_workspace   #f92672 #2C3E50 #BDC3C7
-  }
+	    statusline  #ECF0F1
+	    background  #2C3E50
+
+	    focused_workspace  #3498DB #2C3E50 #f5f5f5
+	    active_workspace   #1ABC9C #2C3E50 #BDC3C7
+	    inactive_workspace #2C3E50 #2C3E50 #BDC3C7
+	    urgent_workspace   #f92672 #2C3E50 #BDC3C7
+	}
 }
