@@ -9,9 +9,9 @@
 "amixer set Master toggle"
     m:0x0 + c:74
     F8
-"amixer set Master 10- unmute"
+"amixer set Master 10%- unmute"
     m:0x0 + c:75
     F9
-"amixer set Master 10+ unmute"
+"amixer set Master 10%+ unmute"
     m:0x0 + c:76
     F10
