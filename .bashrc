@@ -13,7 +13,7 @@ HISTFILESIZE=2000
 
 # exports and such
 export EDITOR=nano
-export PATH=$HOME/bin:${PATH}
+export PATH=$HOME/.bin:${PATH}
 
 if [ -f /usr/share/bash-completion/bash_completion ]; then
 	. /usr/share/bash-completion/bash_completion
