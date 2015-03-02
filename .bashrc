@@ -52,6 +52,32 @@ alias tortilla='transmission-cli -w /home/savoca/Torrents/'
 alias ranger='python3 /usr/bin/ranger'
 alias muhip='curl -s checkip.dyndns.org | cut -f 6 -d " " | cut -f 1 -d "<"'
 
+# audio control
+function aux_control {
+	channel=$(amixer | sed -n 3p | cut -f 2 -d ":" | tr -d " ")
+	if [ "$1" != "toggle" ]; then
+		if [ "$channel" = "Mono" ]; then
+			echo "Volume: $(amixer set Master 10%$1 unmute | sed -n 5p | \
+				cut -f 6 -d " " | tr -d \[\])"
+		else
+			echo "Volume: $(amixer set Master 10%$1 unmute | sed -n 6p | \
+				cut -f 7 -d " " | tr -d \[\])"
+		fi
+	else
+		if [ "$channel" = "Mono" ]; then
+			echo "Volume: $(amixer set Master toggle | sed -n 5p | \
+				cut -f 8 -d " " | tr -d \[\])"
+		else
+			echo "Volume: $(amixer set Master toggle | sed -n 6p | \
+				cut -f 8 -d " " | tr -d \[\])"
+		fi
+	fi
+}
+
+alias toggle='aux_control toggle'
+alias raise='aux_control +'
+alias lower='aux_control -'
+
 function lastcommit {
 	git log $1 --pretty=oneline | head -1 | cut -f 1 -d " "
 }
