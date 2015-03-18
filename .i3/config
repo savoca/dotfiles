@@ -119,6 +119,7 @@ client.urgent           #3498DB #2C3E50 #ECF0F1 #2C3E50
 bar {
 	status_command i3status -c ~/.i3/i3status.conf
 	strip_workspace_numbers yes
+	tray_output none
 
 	colors {
 	    statusline  #ECF0F1
