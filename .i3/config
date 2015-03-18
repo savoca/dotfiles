@@ -121,6 +121,7 @@ client.urgent           #747C84 #747C84 #F3F4F5 #747C84
 bar {
 	status_command i3status -c ~/.i3/i3status.conf
 	strip_workspace_numbers yes
+	tray_output none
 
 	colors {
 	    statusline  #F3F4F5
