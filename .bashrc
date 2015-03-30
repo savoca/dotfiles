@@ -13,7 +13,7 @@ HISTFILESIZE=2000
 
 # exports and such
 export EDITOR=nano
-export PATH=$HOME/.bin:${PATH}
+export PATH=$HOME/.bin:$HOME/.bin/scripts:${PATH}
 
 if [ -f /usr/share/bash-completion/bash_completion ]; then
 	. /usr/share/bash-completion/bash_completion
@@ -51,6 +51,7 @@ alias sdr='screen -d -r'
 alias tortilla='transmission-cli -w /home/savoca/Torrents/'
 alias ranger='python3 /usr/bin/ranger'
 alias muhip='curl -s checkip.dyndns.org | cut -f 6 -d " " | cut -f 1 -d "<"'
+alias mainline='curl -s https://www.kernel.org/finger_banner | head -1 | cut -c63-'
 
 # audio control
 function aux_control {
