@@ -79,10 +79,6 @@ alias toggle='aux_control toggle'
 alias raise='aux_control +'
 alias lower='aux_control -'
 
-function lastcommit {
-	git log $1 --pretty=oneline | head -1 | cut -f 1 -d " "
-}
-
 # prompt and such
 function git_branch {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'
