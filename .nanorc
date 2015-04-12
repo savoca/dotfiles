@@ -7,6 +7,12 @@ set nohelp
 ## Don't wrap text at all.
 set nowrap
 
+## Enable smooth line scrolling
+set smooth
+
+## Titlebar color
+set titlecolor white
+
 ## Nanorc files
 include /usr/share/nano/nanorc.nanorc
 
