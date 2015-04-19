@@ -134,3 +134,5 @@ bar {
 	    urgent_workspace   #747C84 #747C84 #F3F4F5
 	}
 }
+
+exec $HOME/.bin/scripts/lock.sh
