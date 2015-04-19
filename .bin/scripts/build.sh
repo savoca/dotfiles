@@ -9,34 +9,34 @@ function script_exit {
 }
 
 # Check input and print input
-USAGE="Usage: $0 [toolchain prefix] [device config] [options...]\n
+USAGE="Usage: $0 [arch] [toolchain prefix] [device config] [options...]\n
 	options:\n
 	clean - run make clean and make mproper\n
 	nomake - go straight to dtb image creation\n
 	extconfig - specify an extra config to be added to final config"
-[[ -z $1 || -z $2 ]] && echo -e $USAGE && exit 1
+[[ -z $1 || -z $2  || -z $3 ]] && echo -e $USAGE && exit 1
 
 # Setup build variables
-CONFIG=$2
+CONFIG=$3
 SHORTCONFIG=$(basename $CONFIG)
-export ARCH=arm
-export CROSS_COMPILE=$1
+export ARCH=$1
+export CROSS_COMPILE=$2
 
 # Build and/or clean
-[[ $3 = *'clean'* ]] && make clean && make mrproper
-[[ $3 = *'nomake'* ]] || make $SHORTCONFIG
-if [[ $3 = *'extconfig'* ]]; then
-	for i in "${@:4}"; do
+[[ $4 = *'clean'* ]] && make clean && make mrproper
+[[ $4 = *'nomake'* ]] || make $SHORTCONFIG
+if [[ $4 = *'extconfig'* ]]; then
+	for i in "${@:5}"; do
 		cat $i >> $CONFIG
 	done
 	make $SHORTCONFIG
 	git checkout -- $CONFIG
 fi
-[[ $3 = *'nomake'* ]] || make -j$(cat /proc/cpuinfo | grep -c ^processor)
+[[ $4 = *'nomake'* ]] || make -j$(cat /proc/cpuinfo | grep -c ^processor)
 
 # Check build completion
-ZIMAGE=$(find . -wholename "*/zImage")
-[[ -z $ZIMAGE ]] && script_exit
+IMAGE=$(find . -name "*Image")
+[[ -z $IMAGE ]] && script_exit
 
 # Find, detect and compile dtb image
 DTB=$(find . -name "*.dtb" | head -1)
