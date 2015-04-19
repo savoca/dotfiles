@@ -11,9 +11,9 @@ for_window [class="File-roller"] floating enable
 for_window [class="Gnome-terminal"] floating enable
 
 # 0px Border Windows
-for_window [class="chrome"] border none
+for_window [class="chrome"] border none, move container to workspace 2:web
 for_window [class="Firefox"] border none
-for_window [class="Spotify"] border none
+for_window [class="Spotify"] border none, move container to workspace 4:aux
 
 # 1px Border Windows
 for_window [class="URxvt" ] border 1pixel
@@ -135,4 +135,6 @@ bar {
 	}
 }
 
+exec --no-startup-id i3-msg 'exec spotify'
+exec --no-startup-id i3-msg 'exec google-chrome-stable'
 exec $HOME/.bin/scripts/lock.sh
