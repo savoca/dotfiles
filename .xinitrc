@@ -24,6 +24,6 @@ if (xinput | grep "CM Storm Quickfire" > /dev/null) then
 fi
 
 # The rest!
-. /home/savoca/.fehbg
+. $HOME/.fehbg
 compton -b
 exec i3
