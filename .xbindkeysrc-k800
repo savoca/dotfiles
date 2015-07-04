@@ -1,0 +1,23 @@
+# ~/.xbindkeysrc-k800
+
+"spotify"
+    m:0x0 + c:179
+    XF86Tools
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+    m:0x10 + c:173
+    Mod2 + XF86AudioPrev
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+    m:0x10 + c:172
+    Mod2 + XF86AudioPlay
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+    m:0x10 + c:171
+    Mod2 + XF86AudioNext
+"amixer set Master 10%+ unmute"
+    m:0x10 + c:123
+    Mod2 + XF86AudioRaiseVolume
+"amixer set Master toggle"
+    m:0x10 + c:121
+    Mod2 + XF86AudioMute
+"amixer set Master 10%- unmute"
+    m:0x10 + c:122
+    Mod2 + XF86AudioLowerVolume
