@@ -23,6 +23,11 @@ if (xinput | grep "CM Storm Quickfire" > /dev/null) then
 	xbindkeys -f ~/.xbindkeysrc-quickfire
 fi
 
+# Logitech K800 Keyboard
+if (xinput | grep "Logitech K800" > /dev/null) then
+	xbindkeys -f ~/.xbindkeysrc-k800
+fi
+
 # The rest!
 . $HOME/.fehbg
 compton -b
