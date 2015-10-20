@@ -8,3 +8,5 @@
 
 export EDITOR=nano
 export PATH=$HOME/.bin:$HOME/.bin/scripts:${PATH}
+
+LS_COLORS=$LS_COLORS:'di=1;36:'; export LS_COLORS
