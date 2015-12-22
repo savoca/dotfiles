@@ -15,6 +15,7 @@ alias stat='git status'
 alias cmt='git commit'
 alias psh='git push'
 alias rvt='git revert'
+alias cln='git checkout -- . && git clean -dfq'
 
 # General/Programs
 alias ..='cd ..'
