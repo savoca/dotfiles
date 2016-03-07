@@ -1,0 +1,20 @@
+# ~/.xbindkeysrc-2015-rmbp
+
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+	m:0x0 + c:173
+	XF86AudioPrev
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+	m:0x0 + c:172
+	XF86AudioPlay
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+	m:0x0 + c:171
+	XF86AudioNext
+"amixer set Master toggle"
+	m:0x0 + c:121
+	XF86AudioMute
+"amixer set Master 10%- unmute"
+	m:0x0 + c:122
+	XF86AudioLowerVolume
+"amixer set Master 10%+ unmute"
+	m:0x0 + c:123
+	XF86AudioRaiseVolume

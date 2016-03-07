@@ -18,6 +18,12 @@ if [ "$BOARD" = "Peppy" ]; then
 	xbindkeys -f ~/.xbindkeysrc-c720
 fi
 
+# 2015 Apple rMBP
+if [ "$BOARD" = "Mac-06F11F11946D27C5" ]; then
+	xrandr --output eDP-1 --mode 1440x900
+	xbindkeys -f ~/.xbindkeysrc-2015-rmbp
+fi
+
 # CM Storm Quickfire Rapid-i Keyboard
 if (xinput | grep "CM Storm Quickfire" > /dev/null) then
 	xbindkeys -f ~/.xbindkeysrc-quickfire
