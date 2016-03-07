@@ -1,5 +1,17 @@
 # ~/.xbindkeysrc-2015-rmbp
 
+"$HOME/.bin/scripts/xblmbp.sh down"
+	m:0x0 + c:232
+	XF86MonBrightnessDown
+"$HOME/.bin/scripts/xblmbp.sh up"
+	m:0x0 + c:233
+	XF86MonBrightnessUp
+"$HOME/.bin/scripts/xblmbp-kb.sh down"
+	m:0x0 + c:237
+	XF86KbdBrightnessDown
+"$HOME/.bin/scripts/xblmbp-kb.sh up"
+	m:0x0 + c:238
+	XF86KbdBrightnessUp
 "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 	m:0x0 + c:173
 	XF86AudioPrev
