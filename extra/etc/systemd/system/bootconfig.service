@@ -1,0 +1,11 @@
+[Unit]
+Description=Bootup Configuration
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bootconfig.sh
+After=systemd-logind.service
+RemainAfterExit=True
+
+[Install]
+WantedBy=multi-user.target
