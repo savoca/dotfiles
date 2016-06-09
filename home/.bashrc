@@ -1,4 +1,4 @@
-# ~/.bashrc
+#!/bin/bash
 
 [[ $- != *i* ]] && return
 [[ -f $HOME/.bash_aliases ]] && . $HOME/.bash_aliases
