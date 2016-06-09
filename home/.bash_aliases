@@ -26,3 +26,12 @@ alias mainline='curl -s https://www.kernel.org/finger_banner | head -1 | cut -c6
 alias d2h='printf "0x%x\n" $@'
 alias h2d='printf "%d\n" $@'
 alias adb='adb wait-for-device'
+
+# Extra functionality
+function random_line() {
+	[[ -z $1 || ! -f $1 ]] && return
+	VAL=$(dd if=/dev/urandom bs=1 count=4 2>/dev/null | \
+		od -t u | head -1 | awk '{print $2}')
+	[[ $VAL -eq 0 ]] && VAL=1
+	sed -n "$(expr $VAL % $(cat $1 | wc -l))p" $1
+}
