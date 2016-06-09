@@ -1,4 +1,4 @@
-# ~/.bash_aliases
+#!/bin/bash
 
 # Colored output
 alias ls='ls --color=auto'
