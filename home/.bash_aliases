@@ -38,5 +38,6 @@ function random_line() {
 
 function qemu() {
 	[[ ! -f $1 ]] && return
-	qemu-system-x86_64 -enable-kvm -hda $1 -m 2G -smp cpus=2 -daemonize
+	qemu-system-x86_64 -name $(basename $1) -enable-kvm \
+		-hda $1 -m 2G -smp cpus=2 -daemonize ${@:2}
 }
