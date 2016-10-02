@@ -35,3 +35,8 @@ function random_line() {
 	[[ $VAL -eq 0 ]] && VAL=1
 	sed -n "$(expr $VAL % $(cat $1 | wc -l))p" $1
 }
+
+function qemu() {
+	[[ ! -f $1 ]] && return
+	qemu-system-x86_64 -enable-kvm -hda $1 -m 2G -smp cpus=2 -daemonize
+}
