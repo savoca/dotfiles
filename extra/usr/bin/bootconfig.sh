@@ -1,14 +1,15 @@
 #!/bin/bash
 
-# Wait for a little while after logind to let everything settle
-sleep 3
+# For MacBookPro11,5
 
-# Whatever you need here
+# Enable monitor backlight control (or use apple_set_os.efi)
+# setpci -v -H1 -s 00:01.00 BRIDGE_CONTROL=0
 
-## Apple keyboard backlight control
-chmod 0666 /sys/class/leds/smc\:\:kbd_backlight/brightness
+# Disable AMD GPU (has no effect when 'gpu-switch -d' is used)
+echo OFF > /sys/kernel/debug/vgaswitcheroo/switch
 
-## 2015 rMBP (and maybe others) gmux_backlight control
-setpci -v -H1 -s 00:01.00 BRIDGE_CONTROL=0
-chmod 0666 /sys/class/backlight/gmux_backlight/brightness
-echo 1000 > /sys/class/backlight/gmux_backlight/brightness
+# Disable red LED from AUX port
+echo 1 > /sys/module/snd_hda_intel/parameters/power_save
+
+# Set default brightness (remember to disable systemd-backlight services)
+echo 292 > /sys/class/backlight/gmux_backlight/brightness
