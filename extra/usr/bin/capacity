@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for i in $(ls -1d /sys/class/power_supply/BAT*); do
+	echo "$(basename $i): $(cat $i/capacity)"
+done 
