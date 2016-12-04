@@ -13,3 +13,10 @@ echo 1 > /sys/module/snd_hda_intel/parameters/power_save
 
 # Set default brightness (remember to disable systemd-backlight services)
 echo 292 > /sys/class/backlight/gmux_backlight/brightness
+
+# Disable ACPI wakeup events
+echo XHC1 > /proc/acpi/wakeup
+echo LID0 > /proc/acpi/wakeup
+
+# Boot into Linux again unless otherwise specified
+efibootmgr -n 0001 # Get the right value for your grub entry first
