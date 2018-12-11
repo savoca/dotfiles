@@ -20,12 +20,12 @@ alias cln='git checkout -- . && git clean -dfq'
 # General/Programs
 alias ..='cd ..'
 alias tortilla='transmission-cli -w /home/savoca/Torrents/'
-alias ranger='python3 /usr/bin/ranger'
 alias muhip='curl -s checkip.dyndns.org | cut -f 6 -d " " | cut -f 1 -d "<"'
 alias mainline='curl -s https://www.kernel.org/finger_banner | head -1 | cut -c63-'
 alias d2h='printf "0x%x\n" $@'
 alias h2d='printf "%d\n" $@'
-alias adb='adb wait-for-device'
+alias storage='df -hl | grep /dev/sd | sort'
+alias reload-fonts='fc-cache && xset fp rehash'
 
 # Extra functionality
 function random_line() {
@@ -40,4 +40,29 @@ function qemu() {
 	[[ ! -f $1 ]] && return
 	qemu-system-x86_64 -name $(basename $1) -enable-kvm \
 		-hda $1 -m 2G -smp cpus=2 -daemonize -redir tcp:10022::22 ${@:2}
+}
+
+function push-all() {
+	[[ -n $1 ]] && path=$1 || path=/data/local/tmp/
+	ls -1 | while read i; do
+		adb wait-for-device push $i $path
+	done
+}
+
+function adb-grant()
+{
+	[[ ! -f $1 ]] && echo "Need an apk" && return
+	package=$(aapt dump badging $1 | grep package: | awk '{print $2}' | cut -f2 -d\')
+	echo "$package"
+	for i in $(aapt dump badging $1 | grep uses-perm | cut -f2 -d\'); do
+		echo -n "$i " && adb wait-for-device shell su 0 pm grant $package $i \
+			&& echo "OK"
+	done
+}
+
+function adb-launch()
+{
+	[[ ! -f $1 ]] && echo "Need an apk" && return
+	activity=$(aapt dump badging $1 | grep launchable | cut -f2 -d' ' | cut -f2 -d\' | sed 's/\(.*\)\./\1\/./')
+	adb wait-for-device shell am start -n $activity
 }
