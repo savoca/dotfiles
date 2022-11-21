@@ -24,7 +24,7 @@ alias muhip='curl -s checkip.dyndns.org | cut -f 6 -d " " | cut -f 1 -d "<"'
 alias mainline='curl -s https://www.kernel.org/finger_banner | head -1 | cut -c63-'
 alias d2h='printf "0x%x\n" $@'
 alias h2d='printf "%d\n" $@'
-alias storage='df -hl | grep /dev/sd | sort'
+alias storage='df -h 2>/dev/null | grep -v -e ^tmpfs -e ^udev'
 alias reload-fonts='fc-cache && xset fp rehash'
 
 # Extra functionality
@@ -65,4 +65,24 @@ function adb-launch()
 	[[ ! -f $1 ]] && echo "Need an apk" && return
 	activity=$(aapt dump badging $1 | grep launchable | cut -f2 -d' ' | cut -f2 -d\' | sed 's/\(.*\)\./\1\/./')
 	adb wait-for-device shell am start -n $activity
+}
+
+function tzprint()
+{
+	while true; do
+		clear
+		ls -1d /sys/class/thermal/thermal_zone* | while read i; do
+			type=$(cat $i/type)
+			temp=$(expr $(cat $i/temp) / 1000)
+			echo "$type: $temp"
+		done
+		sleep 1
+	done
+}
+
+function repo-stat()
+{
+	grep "$2" $1 | tr ' ' '\n' | grep path= | \
+		cut -f2 -d\" | while read i; do echo $i && pushd $i 1>/dev/null && \
+			git status && popd 1>/dev/null && echo; done
 }
